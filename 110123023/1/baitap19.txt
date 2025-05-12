@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hộp Thư Góp Ý</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center; 
+            justify-content: flex-start; 
+            gap: 20px; 
+        }
+        label {
+            margin-bottom: 5px;
+            white-space: nowrap; 
+        }
+        input[type="text"], input[type="radio"], input[type="checkbox"], textarea, select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+       
+        .checkbox-group, .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        
+        textarea {
+            resize: none; 
+            width: 50%;
+            height: 100px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: white;
+        }
+        .btn-send {
+            color: #000000;
+            border: 1px solid #000000;
+            margin-right: 17px;
+        }
+        .btn-cancel {
+            color: #000000;
+            border: 1px solid #000000;
+        }
+
+        .form-group label {
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>HỘP THƯ GÓP Ý</h1>
+<form>
+    <div class="form-group">
+        <label for="name">Họ tên:</label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="location">Quê quán:</label>
+        <select id="location" name="location">
+            <option value="">-Chọn tỉnh/thành-</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+            <option value="Trà Vinh">Trà Vinh</option>
+            <option value="Đồng Tháp">Đồng Tháp</option>
+            <option value="Bạc Liêu">Bạc Liêu</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Góp ý về lĩnh vực:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="field" value="Bố cục">Bố cục</label>
+            <label><input type="checkbox" name="field" value="Giao diện Web">Giao diện Web</label>
+            <label><input type="checkbox" name="field" value="Thể loại sách">Thể loại sách</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Ngôn ngữ:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="language" value="English">Anh</label>
+            <label><input type="radio" name="language" value="Vietnamese">Việt</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Nội dung:</label>
+        <textarea id="content" name="content" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn-send">Gửi</button>
+        <button type="button" class="btn-cancel">Hủy bỏ</button>
+    </div>
+</form>
+
+</body>
+</html>
